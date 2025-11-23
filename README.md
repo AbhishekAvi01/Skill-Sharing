@@ -64,6 +64,30 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/5b71905f-d1a0-408f-b534-9ecd59a51412) and click on Share -> Publish.
 
+## Netlify Deployment
+
+### Disable Password Protection
+
+If your site shows a password protection screen on Netlify, follow these steps to disable it:
+
+1. Go to [Netlify Dashboard](https://app.netlify.com)
+2. Select your site (`skillsharing.netlify.app`)
+3. Navigate to **Site settings** (or click on your site name → Settings)
+4. Go to **Access control** in the left sidebar
+5. Under **Password protection**, click **Disable password protection** or toggle it off
+6. Save the changes
+
+### Environment Variables Setup
+
+Make sure to set these environment variables in Netlify:
+
+1. Go to **Site settings** → **Environment variables**
+2. Add the following variables:
+   - `VITE_SUPABASE_URL` - Your Supabase project URL
+   - `VITE_SUPABASE_PUBLISHABLE_KEY` - Your Supabase anon/public key
+
+3. After adding variables, trigger a new deploy (Deploys → Trigger deploy → Deploy site)
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
